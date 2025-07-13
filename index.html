@@ -4,31 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Forecast</title>
+    <title>Previsão do Tempo</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scrips.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="scripts.js" defer></script>
 </head>
 
 <body>
-    <div class="major-box">
-        <input class="input-city" placeholder="Digite o nome da cidade">
-        <button class="search-button" onclick="clickButton()">
-            <img class="img-search" src="https://www.svgrepo.com/show/488200/find.svg" alt="Busca">
-        </button>
-
-        <div class="middle-box">
-            <h2 class="city">Tempo em São Paulo</h2>
-
-            <p class="temp">21°C</p>
-
-            <div class="small-box">
-                <img class="img-weather" alt="icone-info-tempo" src="https://openweathermap.org/img/wn/04n.png">
-                <p class="text-weather">Nublado</p>
-            </div>
-
-            <p class="humidity">Umidade: 76%</p>
+    <div class="weather-container">
+        <div class="search-box">
+            <input class="input-city" type="text" placeholder="Digite o nome da cidade">
+            <button class="search-button">
+                <img class="img-search" src="https://www.svgrepo.com/show/488200/find.svg" alt="Buscar">
+            </button>
         </div>
 
+        <div class="weather-info">
+            <h2 class="city">Carregando...</h2>
+            <p class="temp">--°C</p>
+
+            <div class="description-box">
+                <img class="img-weather" src="https://openweathermap.org/img/wn/04n.png" alt="Ícone do tempo">
+                <p class="text-weather">--</p>
+            </div>
+
+            <p class="humidity">Umidade: --%</p>
+            <p class="wind-speed">Vento: -- m/s</p>
+        </div>
+
+        <div class="error-message" style="display: none;">
+            Cidade não encontrada. Tente novamente!
+        </div>
+    </div>
 </body>
 
 </html>
