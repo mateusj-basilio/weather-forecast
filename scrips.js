@@ -59,5 +59,5 @@ document.querySelector(".input-city").addEventListener("keypress", (event) => {
 
 // Carrega um valor inicial (opcional)
 document.addEventListener("DOMContentLoaded", () => {
-    citySearch("São Paulo");
+    // citySearch("São Paulo"); // Removido para não carregar uma cidade padrão
 });
